@@ -28,14 +28,21 @@ for (const tag of ['picture', 'details', 'a', 'p']) {
     (readme.match(new RegExp(`</${tag}>`, 'g')) || []).length, `Unbalanced ${tag}`);
 }
 let svgCount = 0;
-for (const file of await readdir('assets')) {
+for (const file of await readdir('assets', { recursive: true })) {
   const path = `assets/${file}`;
+  if ((await stat(path)).isDirectory()) continue;
   assert((await stat(path)).size < 500_000, `Oversized asset: ${path}`);
   if (!file.endsWith('.svg')) continue;
   svgCount++;
   const svg = await readFile(path, 'utf8');
   assert(svg.startsWith('<svg') && svg.trimEnd().endsWith('</svg>'), `Malformed SVG envelope: ${path}`);
   assert(/viewBox="[^"]+"/.test(svg) && /<title\b/.test(svg) && /<desc\b/.test(svg), `Missing SVG accessibility metadata: ${path}`);
+  if (file.startsWith('badges')) {
+    const tag = svg.match(/^<svg[^>]+>/)[0];
+    const width = Number(tag.match(/\bwidth="([\d.]+)"/)[1]);
+    const height = Number(tag.match(/\bheight="([\d.]+)"/)[1]);
+    assert.equal(tag.match(/\bviewBox="([^"]+)"/)[1], `0 0 ${width} ${height}`, `Badge viewBox clips content: ${path}`);
+  }
   assert(!/<script\b|<foreignObject\b|<!ENTITY|(?:href|src)="https?:|\bon\w+=/i.test(svg), `Active or external SVG content: ${path}`);
   if (file.startsWith('contributions-')) assert(!/@keyframes|animation\s*:/.test(svg), 'Reduced-motion SVG still animates');
 }

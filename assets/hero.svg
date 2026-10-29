@@ -1,30 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
 <title id="title">Shubh Raghav · Software Developer</title>
-<desc id="desc">Architecting ideas. Engineering experiences. A midnight panel with a lavender interlocking geometric monogram.</desc>
+<desc id="desc">Architecting ideas. Engineering experiences. Electric violet light trails and an animated geometric SR monogram. Motion stops when reduced motion is preferred.</desc>
 <defs>
- <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0c0b13"/><stop offset="1" stop-color="#1e1334"/></linearGradient>
- <linearGradient id="ink" x2="1" y2="1"><stop stop-color="#e0d5ff"/><stop offset="1" stop-color="#9670ed"/></linearGradient>
- <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#c4afff" stroke-opacity=".045"/></pattern>
+ <linearGradient id="bg" x2="1" y2=".5"><stop stop-color="#100b1c"/><stop offset=".56" stop-color="#281047"/><stop offset="1" stop-color="#56218a"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#a864f3" stop-opacity=".35"/><stop offset="1" stop-color="#a864f3" stop-opacity="0"/></radialGradient>
+ <linearGradient id="ink" x2="1" y2="1"><stop stop-color="#f0e3ff"/><stop offset="1" stop-color="#b68aff"/></linearGradient>
+ <linearGradient id="line"><stop stop-color="#a67bff" stop-opacity="0"/><stop offset=".5" stop-color="#dbb9ff"/><stop offset="1" stop-color="#a67bff" stop-opacity="0"/></linearGradient>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#dec7ff" stroke-opacity=".06"/></pattern>
 </defs>
-<rect width="1200" height="400" rx="20" fill="url(#bg)"/>
-<rect x=".5" y=".5" width="1199" height="399" rx="20" fill="url(#grid)" stroke="#49345e"/>
-<path d="M64 0V400" stroke="#9c7be4" stroke-opacity=".12"/>
-<g transform="translate(850 70) scale(.86)" fill="none">
- <circle cx="150" cy="150" r="146" stroke="#b89af4" stroke-opacity=".16"/>
- <circle cx="150" cy="150" r="113" stroke="#b89af4" stroke-opacity=".08"/>
- <path d="M-12 150H312M150 -12V312" stroke="#b89af4" stroke-opacity=".12"/>
- <path d="M205 72H112L65 150H166L120 228H212" stroke="url(#ink)" stroke-width="17" stroke-linejoin="bevel"/>
- <path d="M199 72L246 150L199 228M166 150H246" stroke="url(#ink)" stroke-width="17" stroke-linejoin="bevel"/>
- <circle cx="150" cy="4" r="4" fill="#c4a6ff"/>
- <circle cx="296" cy="150" r="3" fill="#c4a6ff"/>
+<style>
+.orbit{stroke-dasharray:3 17;animation:orbit 36s linear infinite;transform-origin:150px 150px}
+.signal{stroke-dasharray:80 1100;animation:signal 12s linear infinite}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes signal{to{stroke-dashoffset:-1180}}
+@media(prefers-reduced-motion:reduce){.orbit,.signal{animation:none}}
+</style>
+<rect width="1200" height="360" rx="18" fill="url(#bg)"/>
+<rect width="1200" height="360" rx="18" fill="url(#grid)"/>
+<ellipse cx="1020" cy="180" rx="600" ry="360" fill="url(#glow)"/>
+<path d="M480 405Q816.0000000000001 158.4 1250 45" fill="none" stroke="#d6b6ff" stroke-opacity="0.05"/><path d="M504 405Q827.0000000000001 158.4 1250 75" fill="none" stroke="#d6b6ff" stroke-opacity="0.064"/><path d="M528 405Q838.0000000000001 158.4 1250 105" fill="none" stroke="#d6b6ff" stroke-opacity="0.078"/><path d="M552 405Q849.0000000000001 158.4 1250 135" fill="none" stroke="#d6b6ff" stroke-opacity="0.092"/><path d="M576 405Q860.0000000000001 158.4 1250 165" fill="none" stroke="#d6b6ff" stroke-opacity="0.10600000000000001"/><path d="M600 405Q871.0000000000001 158.4 1250 195" fill="none" stroke="#d6b6ff" stroke-opacity="0.12000000000000001"/><path d="M624 405Q882.0000000000001 158.4 1250 225" fill="none" stroke="#d6b6ff" stroke-opacity="0.134"/>
+<path class="signal" d="M0 359Q600 358 1200 125.99999999999999" fill="none" stroke="url(#line)" stroke-width="2"/>
+<rect x=".5" y=".5" width="1199" height="359" rx="18" fill="none" stroke="#9d6ace" stroke-opacity=".45"/>
+<g transform="translate(920 29) scale(.8)" fill="none">
+ <circle cx="150" cy="150" r="143" stroke="#dec4ff" stroke-opacity=".16"/>
+ <circle class="orbit" cx="150" cy="150" r="124" stroke="#dfbfff" stroke-opacity=".5"/>
+ <path d="M205 72H112L65 150H166L120 228H212M199 72L246 150L199 228M166 150H246" stroke="url(#ink)" stroke-width="16" stroke-linejoin="bevel"/>
+ <circle cx="150" cy="7" r="4" fill="#efdbff"/>
 </g>
 <g font-family="Arial, Helvetica, sans-serif">
- <text x="64" y="70" fill="#c9b3fa" font-size="15" letter-spacing="3">SOFTWARE DEVELOPER</text>
- <path d="M64 109h42" stroke="#b28bf7" stroke-width="3"/>
- <text x="61" y="207" fill="#f3efff" font-weight="700" font-size="82" letter-spacing="-3">SHUBH RAGHAV</text>
+ <text x="58" y="58" fill="#e3c7ff" font-size="17" letter-spacing="3">SOFTWARE DEVELOPER</text>
+ <path d="M58 90h46" stroke="#d5a7ff" stroke-width="3"/>
+ <text x="55" y="184" fill="#ffffff" font-weight="700" font-size="90" letter-spacing="-3">SHUBH RAGHAV</text>
 
- <text x="64" y="265" fill="#d5cce4" font-size="25">Architecting ideas.</text>
- <text x="295" y="265" fill="#d5cce4" font-size="25">Engineering experiences.</text>
- <text x="64" y="362" fill="#a69ab7" font-size="14" letter-spacing="2">THOUGHTFUL SOFTWARE. PURPOSEFUL DETAILS.</text>
+ <text x="58" y="242" fill="#e7d7f6" font-size="26">Architecting ideas.</text>
+ <text x="300" y="242" fill="#e7d7f6" font-size="26">Engineering experiences.</text>
+ <text x="58" y="326" fill="#d8c1ed" font-size="17" letter-spacing="3">BUILD / REFINE / REPEAT</text>
 </g>
 </svg>

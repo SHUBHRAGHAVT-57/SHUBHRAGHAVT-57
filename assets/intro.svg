@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="56" viewBox="0 0 520 56" role="img" aria-labelledby="title desc">
+<title id="title">Software, built with intent.</title><desc id="desc">An animated introduction cycles between Software, built with intent and Ideas into experiences. Reduced motion shows the first phrase.</desc>
+<defs><clipPath id="typing"><rect class="reveal" x="48" y="0" width="424" height="56"/></clipPath></defs>
+<style>
+text{font-family:Consolas,Menlo,monospace;font-size:26px;fill:#8b5ec5}
+@media(prefers-color-scheme:dark){text{fill:#c6a1fa}}
+.reveal{animation:type 10s steps(26,end) infinite}.first{animation:first 10s step-end infinite}.second{opacity:0;animation:second 10s step-end infinite}
+@keyframes type{0%,20%,70%,90%{width:424px}40%,50%,100%{width:0}}
+@keyframes first{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes second{0%,100%{opacity:0}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.reveal,.first,.second{animation:none}.first{opacity:1}.second{display:none}}
+</style>
+<g clip-path="url(#typing)"><text class="first" x="48" y="36">Software, built with intent.</text><text class="second" x="48" y="36">Ideas into experiences.</text></g>
+</svg>

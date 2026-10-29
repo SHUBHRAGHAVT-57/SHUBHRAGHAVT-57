@@ -25,14 +25,15 @@ export function summarize(repositories, languageBytes, updated) {
 
 export function renderStats(data, theme) {
   const dark = theme === 'dark';
-  const bg = dark ? '#11101c' : '#f7f5fc';
+  const bg = dark ? '#171021' : '#f7f3fc';
   const fg = dark ? '#f0ecff' : '#241639';
   const muted = dark ? '#b8b2cb' : '#625674';
   const colors = ['#a78bfa', '#7960cc', '#c0acf0', '#59427c', '#c9c0d7'];
+  const languageColors = { TypeScript: '#4b9bd3', CSS: '#a67cda', JavaScript: '#dfce59', HTML: '#df8767' };
   let offset = 30;
   const bars = data.languages.map((lang, i) => {
     const width = lang.bytes / data.totalBytes * 540;
-    const rect = `<rect x="${offset.toFixed(3)}" y="156" width="${width.toFixed(3)}" height="12" fill="${colors[i % colors.length]}"/>`;
+    const rect = `<rect x="${offset.toFixed(3)}" y="143" width="${width.toFixed(3)}" height="14" fill="${languageColors[lang.name] || colors[i % colors.length]}"/>`;
     offset += width;
     return rect;
   }).join('');
@@ -41,18 +42,18 @@ export function renderStats(data, theme) {
   const remainder = data.languages.slice(legend.length).reduce((sum, lang) => sum + lang.percent, 0);
   const labels = legend.map((lang) => `${lang.name} ${lang.percent.toFixed(1)}%`);
   if (remainder) labels.push(`Other ${remainder.toFixed(1)}%`);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="282" viewBox="0 0 600 282" role="img" aria-labelledby="title desc">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="290" viewBox="0 0 600 290" role="img" aria-labelledby="title desc">
 <title id="title">Public GitHub snapshot · ${data.updated}</title>
 <desc id="desc">${data.repositories.length} public repositories, ${data.stars} stars. ${escapeXml(labels.join(', ') || 'No public language data')}. Language shares measure source bytes, not proficiency.</desc>
-<rect x=".5" y=".5" width="599" height="281" rx="16" fill="${bg}" stroke="${dark ? '#30263f' : '#e1d9ee'}"/>
+<rect x=".5" y=".5" width="599" height="289" rx="16" fill="${bg}" stroke="${dark ? '#513268' : '#ddcdeb'}"/>
+<path d="M30 12H570" stroke="${dark ? '#a475d9' : '#9b6acd'}" stroke-width="2"/>
 <g font-family="Arial, Helvetica, sans-serif" fill="${fg}">
-<text x="30" y="38" font-size="16" letter-spacing="2" fill="${muted}">PUBLIC SOURCE / SNAPSHOT</text>
-<text x="30" y="98" font-size="42" font-weight="700">${data.repositories.length}<tspan dx="12" font-size="20" font-weight="400">repositories</tspan></text>
-<text x="350" y="98" font-size="42" font-weight="700">${data.stars}<tspan dx="12" font-size="20" font-weight="400">stars</tspan></text>
-<text x="30" y="136" font-size="16" fill="${muted}">SOURCE LANGUAGE MIX</text>
+<text x="30" y="43" font-size="16" letter-spacing="2" fill="${muted}">PUBLIC CODE / SNAPSHOT</text>
+<text x="30" y="88" font-size="31" font-weight="700">Languages in the open.</text>
+<text x="30" y="119" font-size="18" fill="${muted}">${data.repositories.length} public repositories · ${data.stars} stars</text>
 ${bars}
-<text x="30" y="198" font-size="17">${escapeXml(labels.slice(0, 2).join('   /   ') || 'No public language data')}</text>
-<text x="30" y="225" font-size="17">${escapeXml(labels.slice(2).join('   /   '))}</text>
-<text x="30" y="260" font-size="14" fill="${muted}">Updated ${data.updated} UTC · source bytes, not proficiency</text>
+<text x="30" y="194" font-size="19">${escapeXml(labels.slice(0, 2).join('   /   ') || 'No public language data')}</text>
+<text x="30" y="225" font-size="19">${escapeXml(labels.slice(2).join('   /   '))}</text>
+<text x="30" y="271" font-size="14" fill="${muted}">Updated ${data.updated} UTC · source bytes, not proficiency</text>
 </g></svg>\n`;
 }

@@ -10,7 +10,9 @@ The former Next.js, PostgreSQL and backend Node.js badges were removed because t
 
 ## Design and references
 
-The original violet identity, product-quality introduction and KeyTurn feature were retained. A custom geometric SR mark, midnight artwork, lavender accents and mobile-specific hero replace the generic wave and typing widgets. The hero is intentionally static; the contribution snake is the only moving element and has an actual static alternative for reduced motion.
+The original violet identity and KeyTurn feature were retained. A live comparison with the reference led to a more vivid second pass: an electric-violet hero, geometric SR mark with a slow orbit and light-trail animation, locally generated typing introduction, compact action buttons, nine colorful technology badges, and a tighter project section. All hero/typing motion stops under reduced motion; the contribution snake has an actual static alternative. The first animation frame shows a complete introduction so the page makes sense immediately.
+
+The badges were downloaded once from Shields.io and stored locally, including their embedded logo data; profile views do not make runtime badge-service requests. Their contents reflect only the technologies evidenced in the public project. Badges retain their original decimal dimensions, with matching SVG viewBoxes checked to prevent cropping. The stronger appearance comes from contrast, rhythm and visual variety; no extra projects, experience or credentials were invented.
 
 The [requested reference source](https://github.com/subhobhai943/subhobhai943/blob/main/README.md) uses capsule-render for a fading wave header, a hosted typing SVG, extensive Shields badges, section dividers, project tables, social buttons, hosted statistics and a snake from an output branch. Its [snake workflow](https://github.com/subhobhai943/subhobhai943/blob/main/.github/workflows/snake.yml) runs on a schedule/manual dispatch/push and publishes with a separate Pages action. Useful ideas retained here: a strong first impression, clear stack grouping, project specificity and automated contribution artwork. This implementation uses owned artwork, fewer competing elements and no extra output branch or publication action.
 
@@ -42,7 +44,7 @@ No project source, visibility, license or ownership was changed. None of these p
 
 ## Automation and activation after publication approval
 
-`profile-assets.yml` refreshes the hero, public source statistics and snake at **08:19 UTC / 13:49 IST daily**, on manual dispatch, and when its generator files change on `main`. Only its refresh job has `contents: write`; all other permissions default to none. Checkout does not persist credentials. A token is supplied only to the read API calls, pinned snake action and final authenticated push. Actions are pinned to full verified commit hashes. There is no PAT or external publication service.
+`profile-assets.yml` refreshes the hero, introduction, link buttons, footer, public source statistics and snake at **08:19 UTC / 13:49 IST daily**, on manual dispatch, and when its generator files change on `main`. Only its refresh job has `contents: write`; all other permissions default to none. Checkout does not persist credentials. A token is supplied only to the read API calls, pinned snake action and final authenticated push. Actions are pinned to full verified commit hashes. There is no PAT or external publication service. Technology badges are static assets, changed when the evidenced stack changes.
 
 `profile-quality.yml` runs on pushes to `main`, pull requests, manual dispatch and Mondays at **09:43 UTC / 15:13 IST**. It has read-only repository access and checks snapshot logic, local links, HTML structure, SVG policy, workflow pins and seven external README URLs. It does not execute fork PR code with write access. Dependabot proposes monthly action updates.
 
@@ -86,31 +88,31 @@ Use a GitHub-connected email or GitHub's private noreply address for legitimate 
 
 ## Validation evidence — 2026-10-29
 
-The exact final README was rendered with GitHub's REST Markdown API in GFM mode and this repository's context. Its SHA-256 was `2be220ad3d27d379a61a9c426331d6912175995ecc6877d5def75a717786a5b9`. All five picture-source media queries survived GitHub sanitization, including mobile and reduced-motion rules.
+The exact revised README was rendered with GitHub's REST Markdown API in GFM mode and this repository's context. Its SHA-256 was `4c13fb4772623b248f62ea085e578bcde2ef106f2920a00c9f0116c0290ddd6b`. All five picture-source media queries survived GitHub sanitization, including mobile and reduced-motion rules.
 
-The preview used that GitHub-rendered HTML with `github-markdown-css` v5.8.1 and an approximate GitHub content column. Playwright Chromium checked **1440px, 375px and 320px**, each in **dark and light** mode. All six scenarios loaded four images, stayed within the viewport, resolved navigation anchors, opened the statistics disclosure and selected the correct static contribution image under reduced motion. Scoped axe scans with WCAG 2 A/AA and WCAG 2.1 AA tags reported **zero violations**. Automated checks do not constitute a complete accessibility certification or replace the visual inspection performed here.
+The preview used that GitHub-rendered HTML with `github-markdown-css` v5.8.1 and an approximate GitHub content column. Playwright Chromium checked **1440px, 375px and 320px**, each in **dark and light** mode. All six scenarios loaded 18 images, stayed within the viewport, opened both disclosures and selected the correct static contribution image under reduced motion. Scoped axe scans with WCAG 2 A/AA and WCAG 2.1 AA tags reported **zero violations**. Separate browser checks confirmed that both hero SVGs and the typing SVG actually animate normally and stop under reduced motion. Automated checks do not constitute a complete accessibility certification or replace the visual inspection performed here.
 
 Preview evidence: [desktop dark](previews/desktop-dark.webp), [desktop light](previews/desktop-light.webp), [mobile dark](previews/mobile-dark.webp), [mobile light](previews/mobile-light.webp).
 
 | Check | Actual result |
 | --- | --- |
 | `node --test scripts/profile.test.mjs` | 7 tests passed, including private/malformed evidence rejection, byte proportions, empty data, XML escaping and three failure-preservation scenarios |
-| `node scripts/check-profile.mjs` | README structure, 24 references, 8 SVGs, snapshot/text consistency and workflow policy passed |
+| `node scripts/check-profile.mjs` | README structure, 37 references, 22 SVGs, badge dimensions, snapshot/text consistency and workflow policy passed |
 | `node scripts/check-profile.mjs --links` | All 7 unique external README URLs returned HTTP 200 |
 | Actionlint v1.7.12 | Both workflow files passed with no diagnostics; validator download verified against official SHA-256 checksums |
-| XML parsing in Chromium | All 8 SVGs parsed without XML errors |
+| XML parsing in Chromium | All 22 SVGs parsed without XML errors |
 | Syntax and content review | All shipped JavaScript parsed, all YAML parsed, LF text policy passed, no credential-pattern matches |
 | Git whitespace check | Passed after replacing Markdown trailing-space line breaks with explicit `<br>` elements |
 | Snake generation | Pinned Platane/snk distribution generated both real SVGs from 369 anonymous public calendar cells representing 18 contributions; no synthetic activity |
 
 The local snake generation used the unmodified pinned action distribution, verified against its Git blob hashes. A local adapter supplied the real anonymous GitHub calendar in the generator's expected GraphQL response shape, avoiding access to private account data or local credentials. The hosted workflow instead uses its repository-scoped `GITHUB_TOKEN` and the upstream action's normal GraphQL fetch. Both generated animations and their derived static grids are checked in, so the README has no nonexistent output-branch references.
 
-Remaining verification boundary: the actual profile page, GitHub's live theme-handling component/CDN behavior and hosted workflow execution can only be checked after the approved push. No remote workflow run, deployment, profile settings edit or project repository change is claimed. The public demo was opened and photographed; its separate full test suite was not executed in this profile repository.
+The first version was published with approval: both hosted workflows passed and the live profile's images loaded at desktop and mobile widths. This second visual revision remains local for review; its own hosted workflow run and actual published page still need verification after a new approved push. Profile settings and project repositories remain unchanged. The public demo was opened and photographed; its separate full test suite was not executed in this profile repository.
 
 ## Changed-file map
 
 - `README.md`: the profile itself.
-- `assets/`: two hero SVGs, two statistics SVGs, two snake SVGs, two static contribution SVGs and the real KeyTurn screenshot.
+- `assets/`: two hero SVGs, a typing introduction, three link buttons, a footer, nine technology badges, two statistics SVGs, two snake SVGs, two static contribution SVGs and the real KeyTurn screenshot.
 - `data/public-profile.json`: dated, inspectable public statistics.
 - `scripts/`: hero generation, statistics generation/rendering, accessible snake preparation, profile checks and meaningful regression tests. No production dependencies.
 - `.github/`: two Actions workflows and monthly Dependabot action updates.

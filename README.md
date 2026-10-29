@@ -3,20 +3,49 @@
   <img src="assets/hero.svg" width="100%" alt="SHUBH RAGHAV — Architecting ideas. Engineering experiences.">
 </picture>
 
+<p align="center"><img src="assets/intro.svg" width="520" alt="Software, built with intent. Ideas into experiences."></p>
+
 <p align="center"><strong>Software Developer · Full-Stack Development</strong></p>
 
 <p align="center">
-  <a href="#featured-work">Featured work</a> &nbsp; / &nbsp;
-  <a href="#technology">Technology</a> &nbsp; / &nbsp;
-  <a href="#github-activity">Activity</a> &nbsp; / &nbsp;
-  <a href="#connect">Connect</a>
+  <a href="https://github.com/SHUBHRAGHAVT-57"><img src="assets/cta-github.svg" alt="Explore Shubh Raghav's GitHub profile"></a>
+  <a href="https://bookdesign-wine.vercel.app"><img src="assets/cta-demo.svg" alt="Try the live KeyTurn demo"></a>
+  <a href="https://github.com/SHUBHRAGHAVT-57/bookdesign"><img src="assets/cta-source.svg" alt="Read the public KeyTurn source"></a>
 </p>
 
 ## About
 
-I'm **Shubh Raghav**. I build web experiences that turn an idea into something useful, with care for how they look, behave, and hold up over time.
+I'm **Shubh Raghav**. I turn ideas into interactive web products, with an interest in the space between **solid engineering and thoughtful design**.
 
-My interests sit at the intersection of **software engineering, interaction design, and product craftsmanship**. I value clear architecture, accessible interfaces, honest feedback, and software that respects the person using it.
+My public work includes **KeyTurn**, an experiment that brings reading, typing, and recall together in the browser. I care about clear state, useful feedback, and the details that make an application feel considered.
+
+## Technology
+
+**Languages**
+
+<p>
+  <img src="assets/badges/typescript.svg" alt="TypeScript language">
+  <img src="assets/badges/javascript.svg" alt="JavaScript language">
+  <img src="assets/badges/html.svg" alt="HTML markup language">
+  <img src="assets/badges/css.svg" alt="CSS styling language">
+</p>
+
+**Interface & development**
+
+<p>
+  <img src="assets/badges/react.svg" alt="React interface library">
+  <img src="assets/badges/vite.svg" alt="Vite development tooling">
+  <img src="assets/badges/git.svg" alt="Git version control">
+</p>
+
+**Testing**
+
+<p>
+  <img src="assets/badges/vitest.svg" alt="Vitest unit testing">
+  <img src="assets/badges/playwright.svg" alt="Playwright browser testing">
+</p>
+
+Also used in KeyTurn: **localStorage**, **service workers**, **Web Audio**, and a **Web App Manifest**.
 
 ## Featured work
 
@@ -24,30 +53,26 @@ My interests sit at the intersection of **software engineering, interaction desi
 
 **Read. Type. Recall. Review.** A browser-based experiment in making study material more interactive.
 
-<a href="https://bookdesign-wine.vercel.app">
-  <img src="assets/keyturn.webp" width="100%" alt="KeyTurn's live interface: a two-page book with study passages, typing inputs, and live typing feedback.">
-</a>
+<p align="center"><a href="https://bookdesign-wine.vercel.app">
+  <img src="assets/keyturn.webp" width="720" alt="KeyTurn's live interface: a two-page book with study passages, typing inputs, and live typing feedback.">
+</a></p>
 
 KeyTurn pairs original reading passages with typing practice, short recall questions, and targeted fill-in-the-blank reviews. Progress stays in the browser; the production app supports offline use after its first online load.
 
-- **Interaction:** typing feedback, corrections, page transitions, and a final memory report.
-- **Implementation:** versioned local storage, deterministic review scoring, and explicit state transitions.
-- **Verification in the repository:** unit tests and Playwright scenarios for the demo flow, persistence, accessibility, and viewport layouts.
+- **Built for interaction:** live typing feedback, page transitions, recall questions, and a final memory report.
+- **Designed to persist:** versioned browser storage and offline support after the first production visit.
+- **Engineering in the open:** deterministic scoring, explicit state transitions, unit tests, and Playwright scenarios.
 
 `TypeScript` · `React` · `Vite` · `CSS` · `Vitest` · `Playwright`
 
 **[Try the demo](https://bookdesign-wine.vercel.app)** · [Explore the source](https://github.com/SHUBHRAGHAVT-57/bookdesign) · [Read the engineering notes](https://github.com/SHUBHRAGHAVT-57/bookdesign#structure)
 
-<sub>Learning outcomes are a hypothesis, not a measured claim. Recall grading uses explicit keywords; progress is local to the current browser.</sub>
+<details>
+<summary>Engineering notes & limitations</summary>
 
-## Technology
+The public repository includes unit tests and Playwright scenarios for the demo flow, persistence, accessibility, and viewport layouts. Learning outcomes are a hypothesis, not a measured claim. Recall grading uses explicit keywords; progress is local to the current browser.
 
-Tools used in my public work:
-
-**Languages** &nbsp; TypeScript · JavaScript · HTML · CSS<br>
-**Interface** &nbsp; React · responsive CSS · Web Audio<br>
-**Browser platform** &nbsp; localStorage · service workers · Web App Manifest<br>
-**Development & verification** &nbsp; Git · Vite · Vitest · Playwright
+</details>
 
 ## GitHub activity
 
@@ -90,4 +115,4 @@ For a conversation about the public project, **[open an issue in KeyTurn](https:
 
 ---
 
-<p align="center"><strong>Thoughtful software. Purposeful details.</strong><br><sub>Shubh Raghav</sub></p>
+<p align="center"><img src="assets/footer.svg" width="600" alt="Thoughtful software. Purposeful details. Shubh Raghav."></p>
