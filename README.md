@@ -62,7 +62,7 @@ Tools used in my public work:
 <!-- public-stats:start -->
 Updated **2026-10-29 UTC**: **2 public repositories**, **0 stars**.
 
-TypeScript: 76.3% · CSS: 19.3% · HTML: 2.6% · JavaScript: 1.8%
+TypeScript: 71.5% · CSS: 18.1% · JavaScript: 8.0% · HTML: 2.5%
 <!-- public-stats:end -->
 
 Languages are measured by GitHub's source-byte counts across public, non-fork repositories. They describe the code in those repositories, not proficiency or time spent coding. Generated assets remain available if an API update fails.

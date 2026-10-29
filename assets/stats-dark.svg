@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="282" viewBox="0 0 600 282" role="img" aria-labelledby="title desc">
 <title id="title">Public GitHub snapshot · 2026-10-29</title>
-<desc id="desc">2 public repositories, 0 stars. TypeScript 76.3%, CSS 19.3%, HTML 2.6%, JavaScript 1.8%. Language shares measure source bytes, not proficiency.</desc>
+<desc id="desc">2 public repositories, 0 stars. TypeScript 71.5%, CSS 18.1%, JavaScript 8.0%, HTML 2.5%. Language shares measure source bytes, not proficiency.</desc>
 <rect x=".5" y=".5" width="599" height="281" rx="16" fill="#11101c" stroke="#30263f"/>
 <g font-family="Arial, Helvetica, sans-serif" fill="#f0ecff">
 <text x="30" y="38" font-size="16" letter-spacing="2" fill="#b8b2cb">PUBLIC SOURCE / SNAPSHOT</text>
 <text x="30" y="98" font-size="42" font-weight="700">2<tspan dx="12" font-size="20" font-weight="400">repositories</tspan></text>
 <text x="350" y="98" font-size="42" font-weight="700">0<tspan dx="12" font-size="20" font-weight="400">stars</tspan></text>
 <text x="30" y="136" font-size="16" fill="#b8b2cb">SOURCE LANGUAGE MIX</text>
-<rect x="30.000" y="156" width="411.777" height="12" fill="#a78bfa"/><rect x="441.777" y="156" width="104.069" height="12" fill="#7960cc"/><rect x="545.845" y="156" width="14.290" height="12" fill="#c0acf0"/><rect x="560.136" y="156" width="9.864" height="12" fill="#59427c"/>
-<text x="30" y="198" font-size="17">TypeScript 76.3%   /   CSS 19.3%</text>
-<text x="30" y="225" font-size="17">HTML 2.6%   /   JavaScript 1.8%</text>
+<rect x="30.000" y="156" width="385.838" height="12" fill="#a78bfa"/><rect x="415.838" y="156" width="97.513" height="12" fill="#7960cc"/><rect x="513.351" y="156" width="43.259" height="12" fill="#c0acf0"/><rect x="556.610" y="156" width="13.390" height="12" fill="#59427c"/>
+<text x="30" y="198" font-size="17">TypeScript 71.5%   /   CSS 18.1%</text>
+<text x="30" y="225" font-size="17">JavaScript 8.0%   /   HTML 2.5%</text>
 <text x="30" y="260" font-size="14" fill="#b8b2cb">Updated 2026-10-29 UTC · source bytes, not proficiency</text>
 </g></svg>
