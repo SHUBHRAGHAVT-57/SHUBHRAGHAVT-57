@@ -16,28 +16,28 @@
     }
   ],
   "stars": 0,
-  "totalBytes": 313960,
+  "totalBytes": 318582,
   "languageScope": "GitHub Linguist bytes across public, non-fork repositories; not a measure of proficiency.",
   "languages": [
     {
       "name": "TypeScript",
       "bytes": 224329,
-      "percent": 71.45
+      "percent": 70.41
     },
     {
       "name": "CSS",
       "bytes": 56695,
-      "percent": 18.06
+      "percent": 17.8
     },
     {
       "name": "JavaScript",
-      "bytes": 25151,
-      "percent": 8.01
+      "bytes": 29773,
+      "percent": 9.35
     },
     {
       "name": "HTML",
       "bytes": 7785,
-      "percent": 2.48
+      "percent": 2.44
     }
   ]
 }

@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="290" viewBox="0 0 600 290" role="img" aria-labelledby="title desc">
 <title id="title">Public GitHub snapshot · 2026-10-29</title>
-<desc id="desc">2 public repositories, 0 stars. TypeScript 71.5%, CSS 18.1%, JavaScript 8.0%, HTML 2.5%. Language shares measure source bytes, not proficiency.</desc>
+<desc id="desc">2 public repositories, 0 stars. TypeScript 70.4%, CSS 17.8%, JavaScript 9.3%, HTML 2.4%. Language shares measure source bytes, not proficiency.</desc>
 <rect x=".5" y=".5" width="599" height="289" rx="16" fill="#171021" stroke="#513268"/>
 <path d="M30 12H570" stroke="#a475d9" stroke-width="2"/>
 <g font-family="Arial, Helvetica, sans-serif" fill="#f0ecff">
 <text x="30" y="43" font-size="16" letter-spacing="2" fill="#b8b2cb">PUBLIC CODE / SNAPSHOT</text>
 <text x="30" y="88" font-size="31" font-weight="700">Languages in the open.</text>
 <text x="30" y="119" font-size="18" fill="#b8b2cb">2 public repositories · 0 stars</text>
-<rect x="30.000" y="143" width="385.838" height="14" fill="#4b9bd3"/><rect x="415.838" y="143" width="97.513" height="14" fill="#a67cda"/><rect x="513.351" y="143" width="43.259" height="14" fill="#dfce59"/><rect x="556.610" y="143" width="13.390" height="14" fill="#df8767"/>
-<text x="30" y="194" font-size="19">TypeScript 71.5%   /   CSS 18.1%</text>
-<text x="30" y="225" font-size="19">JavaScript 8.0%   /   HTML 2.5%</text>
+<rect x="30.000" y="143" width="380.240" height="14" fill="#4b9bd3"/><rect x="410.240" y="143" width="96.099" height="14" fill="#a67cda"/><rect x="506.339" y="143" width="50.466" height="14" fill="#dfce59"/><rect x="556.804" y="143" width="13.196" height="14" fill="#df8767"/>
+<text x="30" y="194" font-size="19">TypeScript 70.4%   /   CSS 17.8%</text>
+<text x="30" y="225" font-size="19">JavaScript 9.3%   /   HTML 2.4%</text>
 <text x="30" y="271" font-size="14" fill="#b8b2cb">Updated 2026-10-29 UTC · source bytes, not proficiency</text>
 </g></svg>
