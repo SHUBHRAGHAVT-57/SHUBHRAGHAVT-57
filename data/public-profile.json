@@ -1,7 +1,13 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "source": "https://api.github.com/users/SHUBHRAGHAVT-57/repos",
   "repositories": [
+    {
+      "name": "algorithmic-lab",
+      "url": "https://github.com/SHUBHRAGHAVT-57/algorithmic-lab",
+      "fork": false,
+      "archived": false
+    },
     {
       "name": "bookdesign",
       "url": "https://github.com/SHUBHRAGHAVT-57/bookdesign",
@@ -13,31 +19,42 @@
       "url": "https://github.com/SHUBHRAGHAVT-57/SHUBHRAGHAVT-57",
       "fork": false,
       "archived": false
+    },
+    {
+      "name": "syncverse",
+      "url": "https://github.com/SHUBHRAGHAVT-57/syncverse",
+      "fork": false,
+      "archived": false
     }
   ],
   "stars": 0,
-  "totalBytes": 318582,
+  "totalBytes": 357638,
   "languageScope": "GitHub Linguist bytes across public, non-fork repositories; not a measure of proficiency.",
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 224329,
-      "percent": 70.41
+      "bytes": 260076,
+      "percent": 72.72
     },
     {
       "name": "CSS",
       "bytes": 56695,
-      "percent": 17.8
+      "percent": 15.85
     },
     {
       "name": "JavaScript",
       "bytes": 29773,
-      "percent": 9.35
+      "percent": 8.32
     },
     {
       "name": "HTML",
-      "bytes": 7785,
-      "percent": 2.44
+      "bytes": 8205,
+      "percent": 2.29
+    },
+    {
+      "name": "Python",
+      "bytes": 2889,
+      "percent": 0.81
     }
   ]
 }
