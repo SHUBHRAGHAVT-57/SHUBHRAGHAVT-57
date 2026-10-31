@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="290" viewBox="0 0 600 290" role="img" aria-labelledby="title desc">
-<title id="title">Public GitHub snapshot · 2026-10-30</title>
+<title id="title">Public GitHub snapshot · 2026-10-31</title>
 <desc id="desc">4 public repositories, 0 stars. TypeScript 72.7%, CSS 15.8%, JavaScript 8.3%, Other 3.1%. Language shares measure source bytes, not proficiency.</desc>
 <rect x=".5" y=".5" width="599" height="289" rx="16" fill="#171021" stroke="#513268"/>
 <path d="M30 12H570" stroke="#a475d9" stroke-width="2"/>
@@ -10,5 +10,5 @@
 <rect x="30.000" y="143" width="392.690" height="14" fill="#4b9bd3"/><rect x="422.690" y="143" width="85.604" height="14" fill="#a67cda"/><rect x="508.295" y="143" width="44.954" height="14" fill="#dfce59"/><rect x="553.249" y="143" width="12.389" height="14" fill="#df8767"/><rect x="565.638" y="143" width="4.362" height="14" fill="#c9c0d7"/>
 <text x="30" y="194" font-size="19">TypeScript 72.7%   /   CSS 15.8%</text>
 <text x="30" y="225" font-size="19">JavaScript 8.3%   /   Other 3.1%</text>
-<text x="30" y="271" font-size="14" fill="#b8b2cb">Updated 2026-10-30 UTC · source bytes, not proficiency</text>
+<text x="30" y="271" font-size="14" fill="#b8b2cb">Updated 2026-10-31 UTC · source bytes, not proficiency</text>
 </g></svg>
