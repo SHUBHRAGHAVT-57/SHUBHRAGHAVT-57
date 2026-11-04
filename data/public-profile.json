@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "source": "https://api.github.com/users/SHUBHRAGHAVT-57/repos",
   "repositories": [
     {
@@ -11,6 +11,12 @@
     {
       "name": "bookdesign",
       "url": "https://github.com/SHUBHRAGHAVT-57/bookdesign",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "Lensqivo",
+      "url": "https://github.com/SHUBHRAGHAVT-57/Lensqivo",
       "fork": false,
       "archived": false
     },
@@ -28,33 +34,43 @@
     }
   ],
   "stars": 0,
-  "totalBytes": 357638,
+  "totalBytes": 416835,
   "languageScope": "GitHub Linguist bytes across public, non-fork repositories; not a measure of proficiency.",
   "languages": [
     {
       "name": "TypeScript",
       "bytes": 260076,
-      "percent": 72.72
+      "percent": 62.39
     },
     {
       "name": "CSS",
       "bytes": 56695,
-      "percent": 15.85
+      "percent": 13.6
+    },
+    {
+      "name": "Kotlin",
+      "bytes": 51012,
+      "percent": 12.24
     },
     {
       "name": "JavaScript",
-      "bytes": 29773,
-      "percent": 8.32
+      "bytes": 30612,
+      "percent": 7.34
     },
     {
       "name": "HTML",
       "bytes": 8205,
-      "percent": 2.29
+      "percent": 1.97
+    },
+    {
+      "name": "Java",
+      "bytes": 7346,
+      "percent": 1.76
     },
     {
       "name": "Python",
       "bytes": 2889,
-      "percent": 0.81
+      "percent": 0.69
     }
   ]
 }

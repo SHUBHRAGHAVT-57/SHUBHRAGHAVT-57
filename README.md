@@ -85,9 +85,9 @@ The public repository includes unit tests and Playwright scenarios for the demo 
 <summary>Snapshot numbers and methodology</summary>
 
 <!-- public-stats:start -->
-Updated **2026-11-03 UTC**: **4 public repositories**, **0 stars**.
+Updated **2026-11-04 UTC**: **5 public repositories**, **0 stars**.
 
-TypeScript: 72.7% · CSS: 15.8% · JavaScript: 8.3% · HTML: 2.3% · Python: 0.8%
+TypeScript: 62.4% · CSS: 13.6% · Kotlin: 12.2% · JavaScript: 7.3% · HTML: 2.0% · Java: 1.8% · Python: 0.7%
 <!-- public-stats:end -->
 
 Languages are measured by GitHub's source-byte counts across public, non-fork repositories. They describe the code in those repositories, not proficiency or time spent coding. Generated assets remain available if an API update fails.
