@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="290" viewBox="0 0 600 290" role="img" aria-labelledby="title desc">
-<title id="title">Public GitHub snapshot · 2026-11-04</title>
-<desc id="desc">5 public repositories, 0 stars. TypeScript 62.4%, CSS 13.6%, Kotlin 12.2%, Other 11.8%. Language shares measure source bytes, not proficiency.</desc>
+<title id="title">Public GitHub snapshot · 2026-11-05</title>
+<desc id="desc">6 public repositories, 0 stars. TypeScript 54.7%, Kotlin 23.1%, CSS 13.1%, Other 9.1%. Language shares measure source bytes, not proficiency.</desc>
 <rect x=".5" y=".5" width="599" height="289" rx="16" fill="#f7f3fc" stroke="#ddcdeb"/>
 <path d="M30 12H570" stroke="#9b6acd" stroke-width="2"/>
 <g font-family="Arial, Helvetica, sans-serif" fill="#241639">
 <text x="30" y="43" font-size="16" letter-spacing="2" fill="#625674">PUBLIC CODE / SNAPSHOT</text>
 <text x="30" y="88" font-size="31" font-weight="700">Languages in the open.</text>
-<text x="30" y="119" font-size="18" fill="#625674">5 public repositories · 0 stars</text>
-<rect x="30.000" y="143" width="336.922" height="14" fill="#4b9bd3"/><rect x="366.922" y="143" width="73.447" height="14" fill="#a67cda"/><rect x="440.369" y="143" width="66.085" height="14" fill="#c0acf0"/><rect x="506.454" y="143" width="39.657" height="14" fill="#dfce59"/><rect x="546.111" y="143" width="10.629" height="14" fill="#df8767"/><rect x="556.741" y="143" width="9.517" height="14" fill="#a78bfa"/><rect x="566.257" y="143" width="3.743" height="14" fill="#7960cc"/>
-<text x="30" y="194" font-size="19">TypeScript 62.4%   /   CSS 13.6%</text>
-<text x="30" y="225" font-size="19">Kotlin 12.2%   /   Other 11.8%</text>
-<text x="30" y="271" font-size="14" fill="#625674">Updated 2026-11-04 UTC · source bytes, not proficiency</text>
+<text x="30" y="119" font-size="18" fill="#625674">6 public repositories · 0 stars</text>
+<rect x="30.000" y="143" width="295.570" height="14" fill="#4b9bd3"/><rect x="325.570" y="143" width="124.521" height="14" fill="#7960cc"/><rect x="450.092" y="143" width="70.483" height="14" fill="#a67cda"/><rect x="520.575" y="143" width="28.201" height="14" fill="#dfce59"/><rect x="548.776" y="143" width="8.588" height="14" fill="#df8767"/><rect x="557.364" y="143" width="7.597" height="14" fill="#a78bfa"/><rect x="564.961" y="143" width="2.662" height="14" fill="#7960cc"/><rect x="567.622" y="143" width="2.378" height="14" fill="#c0acf0"/>
+<text x="30" y="194" font-size="19">TypeScript 54.7%   /   Kotlin 23.1%</text>
+<text x="30" y="225" font-size="19">CSS 13.1%   /   Other 9.1%</text>
+<text x="30" y="271" font-size="14" fill="#625674">Updated 2026-11-05 UTC · source bytes, not proficiency</text>
 </g></svg>

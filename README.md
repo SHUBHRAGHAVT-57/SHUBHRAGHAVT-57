@@ -101,9 +101,9 @@ Each repository documents its setup and limitations. These are personal projects
 <summary>Snapshot numbers and methodology</summary>
 
 <!-- public-stats:start -->
-Updated **2026-11-04 UTC**: **5 public repositories**, **0 stars**.
+Updated **2026-11-05 UTC**: **6 public repositories**, **0 stars**.
 
-TypeScript: 62.4% · CSS: 13.6% · Kotlin: 12.2% · JavaScript: 7.3% · HTML: 2.0% · Java: 1.8% · Python: 0.7%
+TypeScript: 54.7% · Kotlin: 23.1% · CSS: 13.1% · JavaScript: 5.2% · HTML: 1.6% · Java: 1.4% · Python: 0.5% · GLSL: 0.4%
 <!-- public-stats:end -->
 
 Languages are measured by GitHub's source-byte counts across public, non-fork repositories. They describe the code in those repositories, not proficiency or time spent coding. Generated assets remain available if an API update fails.

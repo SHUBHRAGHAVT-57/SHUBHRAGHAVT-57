@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "source": "https://api.github.com/users/SHUBHRAGHAVT-57/repos",
   "repositories": [
     {
@@ -11,6 +11,12 @@
     {
       "name": "bookdesign",
       "url": "https://github.com/SHUBHRAGHAVT-57/bookdesign",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "Gift-for-Soemeone",
+      "url": "https://github.com/SHUBHRAGHAVT-57/Gift-for-Soemeone",
       "fork": false,
       "archived": false
     },
@@ -34,43 +40,48 @@
     }
   ],
   "stars": 0,
-  "totalBytes": 416835,
+  "totalBytes": 586158,
   "languageScope": "GitHub Linguist bytes across public, non-fork repositories; not a measure of proficiency.",
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 260076,
-      "percent": 62.39
-    },
-    {
-      "name": "CSS",
-      "bytes": 56695,
-      "percent": 13.6
+      "bytes": 320835,
+      "percent": 54.74
     },
     {
       "name": "Kotlin",
-      "bytes": 51012,
-      "percent": 12.24
+      "bytes": 135165,
+      "percent": 23.06
+    },
+    {
+      "name": "CSS",
+      "bytes": 76508,
+      "percent": 13.05
     },
     {
       "name": "JavaScript",
       "bytes": 30612,
-      "percent": 7.34
+      "percent": 5.22
     },
     {
       "name": "HTML",
-      "bytes": 8205,
-      "percent": 1.97
+      "bytes": 9322,
+      "percent": 1.59
     },
     {
       "name": "Java",
-      "bytes": 7346,
-      "percent": 1.76
+      "bytes": 8246,
+      "percent": 1.41
     },
     {
       "name": "Python",
       "bytes": 2889,
-      "percent": 0.69
+      "percent": 0.49
+    },
+    {
+      "name": "GLSL",
+      "bytes": 2581,
+      "percent": 0.44
     }
   ]
 }
