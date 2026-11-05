@@ -5,7 +5,7 @@
 
 <p align="center"><img src="assets/intro.svg" width="520" alt="Software, built with intent. Ideas into experiences."></p>
 
-<p align="center"><strong>Software Developer · Full-Stack Development</strong></p>
+<p align="center"><strong>Software Developer · Web & Android</strong></p>
 
 <p align="center">
   <a href="https://github.com/SHUBHRAGHAVT-57"><img src="assets/cta-github.svg" alt="Explore Shubh Raghav's GitHub profile"></a>
@@ -15,9 +15,9 @@
 
 ## About
 
-I'm **Shubh Raghav**. I turn ideas into interactive web products, with an interest in the space between **solid engineering and thoughtful design**.
+I'm **Shubh Raghav**. I build interactive web products and native Android experiences, with an interest in the space between **solid engineering and thoughtful design**.
 
-My public work includes **KeyTurn**, an experiment that brings reading, typing, and recall together in the browser. I care about clear state, useful feedback, and the details that make an application feel considered.
+My public projects explore active study with **KeyTurn**, native camera controls with **Lensqivo**, collaborative writing with **SyncVerse**, and algorithms with **Algorithmic Lab**. I care about clear state, useful feedback, local persistence, and interfaces that make their behavior easy to understand.
 
 ## Technology
 
@@ -45,7 +45,7 @@ My public work includes **KeyTurn**, an experiment that brings reading, typing, 
   <img src="assets/badges/playwright.svg" alt="Playwright browser testing">
 </p>
 
-Also used in KeyTurn: **localStorage**, **service workers**, **Web Audio**, and a **Web App Manifest**.
+Also used in my public projects: **Kotlin**, **Java**, **Jetpack Compose** and **CameraX** for Android; **Yjs**, **CodeMirror** and **IndexedDB** for collaboration; **Python** for algorithms; and **localStorage**, **service workers** and **Web Audio** for KeyTurn.
 
 ## Featured work
 
@@ -73,6 +73,22 @@ KeyTurn pairs original reading passages with typing practice, short recall quest
 The public repository includes unit tests and Playwright scenarios for the demo flow, persistence, accessibility, and viewport layouts. Learning outcomes are a hypothesis, not a measured claim. Recall grading uses explicit keywords; progress is local to the current browser.
 
 </details>
+
+### More public projects
+
+#### [Lensqivo](https://github.com/SHUBHRAGHAVT-57/Lensqivo)
+
+An Android camera with native photo/video capture, live color looks and restrained beauty controls. Built with Kotlin, Jetpack Compose, CameraX and a Java core. Development build; physical-camera qualification is pending.
+
+#### [SyncVerse](https://github.com/SHUBHRAGHAVT-57/syncverse)
+
+A collaborative Markdown workspace with live editing, presence, local persistence and export. React, TypeScript, Yjs, CodeMirror and IndexedDB. Prototype with a local development relay; production access control is not included.
+
+#### [Algorithmic Lab](https://github.com/SHUBHRAGHAVT-57/algorithmic-lab)
+
+Python algorithms with documented contracts and edge-case tests: Two Sum, Kadane's algorithm, lower bound and BFS shortest paths.
+
+Each repository documents its setup and limitations. These are personal projects; production readiness and measured learning outcomes are not assumed.
 
 ## GitHub activity
 
@@ -109,7 +125,12 @@ Languages are measured by GitHub's source-byte counts across public, non-fork re
 
 ## Connect
 
-For a conversation about the public project, **[open an issue in KeyTurn](https://github.com/SHUBHRAGHAVT-57/bookdesign/issues)**.
+For project questions or reproducible bugs, use the relevant issue tracker:
+
+- [KeyTurn issues](https://github.com/SHUBHRAGHAVT-57/bookdesign/issues)
+- [Lensqivo issues](https://github.com/SHUBHRAGHAVT-57/Lensqivo/issues)
+- [SyncVerse issues](https://github.com/SHUBHRAGHAVT-57/syncverse/issues)
+- [Algorithmic Lab issues](https://github.com/SHUBHRAGHAVT-57/algorithmic-lab/issues)
 
 [Explore my GitHub](https://github.com/SHUBHRAGHAVT-57) · [See the project roadmap](https://github.com/SHUBHRAGHAVT-57/bookdesign/blob/main/docs/ROADMAP.md)
 
