@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="290" viewBox="0 0 600 290" role="img" aria-labelledby="title desc">
-<title id="title">Public GitHub snapshot · 2026-11-11</title>
+<title id="title">Public GitHub snapshot · 2026-11-12</title>
 <desc id="desc">6 public repositories, 0 stars. TypeScript 54.7%, Kotlin 23.1%, CSS 13.1%, Other 9.1%. Language shares measure source bytes, not proficiency.</desc>
 <rect x=".5" y=".5" width="599" height="289" rx="16" fill="#f7f3fc" stroke="#ddcdeb"/>
 <path d="M30 12H570" stroke="#9b6acd" stroke-width="2"/>
@@ -10,5 +10,5 @@
 <rect x="30.000" y="143" width="295.570" height="14" fill="#4b9bd3"/><rect x="325.570" y="143" width="124.521" height="14" fill="#7960cc"/><rect x="450.092" y="143" width="70.483" height="14" fill="#a67cda"/><rect x="520.575" y="143" width="28.201" height="14" fill="#dfce59"/><rect x="548.776" y="143" width="8.588" height="14" fill="#df8767"/><rect x="557.364" y="143" width="7.597" height="14" fill="#a78bfa"/><rect x="564.961" y="143" width="2.662" height="14" fill="#7960cc"/><rect x="567.622" y="143" width="2.378" height="14" fill="#c0acf0"/>
 <text x="30" y="194" font-size="19">TypeScript 54.7%   /   Kotlin 23.1%</text>
 <text x="30" y="225" font-size="19">CSS 13.1%   /   Other 9.1%</text>
-<text x="30" y="271" font-size="14" fill="#625674">Updated 2026-11-11 UTC · source bytes, not proficiency</text>
+<text x="30" y="271" font-size="14" fill="#625674">Updated 2026-11-12 UTC · source bytes, not proficiency</text>
 </g></svg>
