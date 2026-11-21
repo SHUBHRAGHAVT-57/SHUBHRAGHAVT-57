@@ -1,51 +1,78 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 await mkdir('assets', { recursive: true });
 
-// Owned SVG artwork: no remote renderer, JavaScript, font request or image service.
+const monogram = 'M205 72H112L65 150H166L120 228H212M199 72L246 150L199 228M166 150H246';
+
+function dialTicks() {
+  return Array.from({ length: 60 }, (_, i) => {
+    const major = i % 5 === 0;
+    return `<path transform="rotate(${i * 6} 150 150)" d="M150 13v${major ? 8 : 3}" stroke="#f1dfff" stroke-opacity="${major ? .7 : .24}"/>`;
+  }).join('\n');
+}
+
+function lightTrails(width, height) {
+  return Array.from({ length: 28 }, (_, i) => {
+    const startY = Math.round(height * .92) + i * 3;
+    const peak = Math.round(height * .55) - i * 4;
+    const endY = Math.round(height * .39) - i * 6;
+    return `<path d="M${width * .34} ${startY} C${width * .62} ${height + 45},${width * .61} ${peak},${width + 6} ${endY}" />`;
+  }).join('\n');
+}
+
 for (const mobile of [false, true]) {
   const width = mobile ? 600 : 1200;
   const height = mobile ? 450 : 360;
   const x = mobile ? 40 : 58;
-  const art = mobile ? 'translate(404 2) scale(.49)' : 'translate(920 29) scale(.8)';
-  const contours = Array.from({ length: 7 }, (_, i) => `<path d="M${width * .4 + i * 24} ${height + 45}Q${width * .68 + i * 11} ${height * .44} ${width + 50} ${45 + i * 30}" fill="none" stroke="#d6b6ff" stroke-opacity="${.05 + i * .014}"/>`).join('');
+  const dial = mobile ? 'translate(386 12) scale(.62)' : 'translate(830 13) scale(1.10)';
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">
 <title id="title">Shubh Raghav · Software Developer</title>
-<desc id="desc">Architecting ideas. Engineering experiences. Electric violet light trails and an animated geometric SR monogram. Motion stops when reduced motion is preferred.</desc>
+<desc id="desc">A silver and violet SR monogram on an engraved dial, with a slowly turning outer ring and fine violet light trails. Reduced motion holds the artwork still.</desc>
 <defs>
- <linearGradient id="bg" x2="1" y2=".5"><stop stop-color="#100b1c"/><stop offset=".56" stop-color="#281047"/><stop offset="1" stop-color="#56218a"/></linearGradient>
- <radialGradient id="glow"><stop stop-color="#a864f3" stop-opacity=".35"/><stop offset="1" stop-color="#a864f3" stop-opacity="0"/></radialGradient>
- <linearGradient id="ink" x2="1" y2="1"><stop stop-color="#f0e3ff"/><stop offset="1" stop-color="#b68aff"/></linearGradient>
- <linearGradient id="line"><stop stop-color="#a67bff" stop-opacity="0"/><stop offset=".5" stop-color="#dbb9ff"/><stop offset="1" stop-color="#a67bff" stop-opacity="0"/></linearGradient>
- <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#dec7ff" stroke-opacity=".06"/></pattern>
+  <linearGradient id="ground" x2="1" y2=".35"><stop stop-color="#100c1a"/><stop offset=".48" stop-color="#26133e"/><stop offset="1" stop-color="#482665"/></linearGradient>
+  <radialGradient id="wash"><stop stop-color="#b97af9" stop-opacity=".48"/><stop offset=".6" stop-color="#9e55e4" stop-opacity=".16"/><stop offset="1" stop-color="#a75af3" stop-opacity="0"/></radialGradient>
+  <linearGradient id="trail"><stop stop-color="#a464d4" stop-opacity="0"/><stop offset=".38" stop-color="#c082e9" stop-opacity=".25"/><stop offset=".72" stop-color="#d69bfb" stop-opacity=".47"/><stop offset="1" stop-color="#9679d5" stop-opacity=".12"/></linearGradient>
+  <radialGradient id="enamel" cx=".32" cy=".19" r=".95"><stop stop-color="#785595"/><stop offset=".32" stop-color="#4b315f"/><stop offset=".73" stop-color="#251631"/><stop offset="1" stop-color="#54396a"/></radialGradient>
+  <linearGradient id="rim" x1="0" y1=".1" x2=".86" y2=".95"><stop stop-color="#fff1ff"/><stop offset=".19" stop-color="#ae82cf"/><stop offset=".4" stop-color="#422d51"/><stop offset=".58" stop-color="#d7b4f6"/><stop offset=".78" stop-color="#6f5284"/><stop offset="1" stop-color="#e5c7ff"/></linearGradient>
+  <linearGradient id="silver" x1=".1" y1="0" x2=".87" y2="1"><stop stop-color="#fff8ff"/><stop offset=".34" stop-color="#efdfff"/><stop offset=".49" stop-color="#c29ad9"/><stop offset=".52" stop-color="#f7eaff"/><stop offset=".78" stop-color="#ceaae9"/><stop offset="1" stop-color="#9661c4"/></linearGradient>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".9" fill="#ebd8ff" opacity=".19"/></pattern>
+  <clipPath id="frame"><rect width="${width}" height="${height}" rx="18"/></clipPath>
 </defs>
 <style>
-.orbit{stroke-dasharray:3 17;animation:orbit 36s linear infinite;transform-origin:150px 150px}
-.signal{stroke-dasharray:80 1100;animation:signal 12s linear infinite}
-@keyframes orbit{to{transform:rotate(360deg)}}
-@keyframes signal{to{stroke-dashoffset:-1180}}
-@media(prefers-reduced-motion:reduce){.orbit,.signal{animation:none}}
+  .index-ring{transform-origin:150px 150px;animation:turn 64s linear infinite}
+  .signal{stroke-dasharray:64 1500;animation:drift 14s linear infinite}
+  @keyframes turn{to{transform:rotate(360deg)}}
+  @keyframes drift{to{stroke-dashoffset:-1564}}
+  @media(prefers-reduced-motion:reduce){.index-ring,.signal{animation:none}}
 </style>
-<rect width="${width}" height="${height}" rx="18" fill="url(#bg)"/>
-<rect width="${width}" height="${height}" rx="18" fill="url(#grid)"/>
-<ellipse cx="${width * .85}" cy="${height * .5}" rx="${width * .5}" ry="${height}" fill="url(#glow)"/>
-${contours}
-<path class="signal" d="M0 ${height - 1}Q${width * .5} ${height - 2} ${width} ${height * .35}" fill="none" stroke="url(#line)" stroke-width="2"/>
-<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="18" fill="none" stroke="#9d6ace" stroke-opacity=".45"/>
-<g transform="${art}" fill="none">
- <circle cx="150" cy="150" r="143" stroke="#dec4ff" stroke-opacity=".16"/>
- <circle class="orbit" cx="150" cy="150" r="124" stroke="#dfbfff" stroke-opacity=".5"/>
- <path d="M205 72H112L65 150H166L120 228H212M199 72L246 150L199 228M166 150H246" stroke="url(#ink)" stroke-width="16" stroke-linejoin="bevel"/>
- <circle cx="150" cy="7" r="4" fill="#efdbff"/>
+<g clip-path="url(#frame)">
+  <rect width="${width}" height="${height}" fill="url(#ground)"/>
+  <rect width="${width}" height="${height}" fill="url(#grid)"/>
+  <ellipse cx="${width * .84}" cy="${height * .47}" rx="${width * .42}" ry="${height * .93}" fill="url(#wash)"/>
+  <g fill="none" stroke="url(#trail)" stroke-width="1">${lightTrails(width, height)}</g>
+  <path class="signal" d="M${width * .36} ${height + 10}Q${width * .66} ${height + 5} ${width + 10} 36" fill="none" stroke="#d9b0ff" stroke-opacity=".6" stroke-width="1.4"/>
+  <g transform="${dial}">
+    <circle cx="151" cy="157" r="136" fill="#12091d" opacity=".5"/>
+    <circle cx="150" cy="150" r="140" fill="#2d1c3a" stroke="url(#rim)" stroke-width="3"/>
+    <circle cx="150" cy="150" r="121" fill="url(#enamel)" stroke="url(#rim)" stroke-width="2"/>
+    <g fill="none" stroke="#e3c5fa" stroke-opacity=".11"><circle cx="150" cy="150" r="113"/><circle cx="150" cy="150" r="110"/><circle cx="150" cy="150" r="107"/></g>
+    <g class="index-ring">${dialTicks()}<circle cx="150" cy="17" r="2.4" fill="#fff2ff"/></g>
+    <g fill="none" stroke-linejoin="bevel" stroke-linecap="square">
+      <path d="${monogram}" transform="translate(0 7)" stroke="#201327" stroke-width="19"/>
+      <path d="${monogram}" transform="translate(0 4)" stroke="#805894" stroke-width="17"/>
+      <path d="${monogram}" stroke="url(#silver)" stroke-width="16"/>
+    </g>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="${x}" y="${mobile ? 53 : 58}" fill="#ebd3ff" font-size="${mobile ? 19 : 17}" letter-spacing="3">SOFTWARE DEVELOPER</text>
+    <path d="M${x} 90h46" stroke="#cc9eff" stroke-width="3"/>
+    <text x="${x - 3}" y="184" fill="#fffafa" font-size="${mobile ? 72 : 90}" font-weight="700" letter-spacing="-3">SHUBH${mobile ? '' : ' RAGHAV'}</text>
+    ${mobile ? '<text x="37" y="264" fill="#fffafa" font-size="72" font-weight="700" letter-spacing="-3">RAGHAV</text>' : ''}
+    <text x="${x}" y="${mobile ? 326 : 242}" fill="#e9d9f3" font-size="26">Architecting ideas.${mobile ? '' : ' Engineering experiences.'}</text>
+    ${mobile ? '<text x="40" y="362" fill="#e9d9f3" font-size="26">Engineering experiences.</text>' : ''}
+    <text x="${x}" y="${height - 34}" fill="#d8c1ed" font-size="17" letter-spacing="3">BUILD / REFINE / REPEAT</text>
+  </g>
 </g>
-<g font-family="Arial, Helvetica, sans-serif">
- <text x="${x}" y="${mobile ? 53 : 58}" fill="#e3c7ff" font-size="${mobile ? 19 : 17}" letter-spacing="3">SOFTWARE DEVELOPER</text>
- <path d="M${x} ${mobile ? 94 : 90}h46" stroke="#d5a7ff" stroke-width="3"/>
- <text x="${x - 3}" y="${mobile ? 184 : 184}" fill="#ffffff" font-weight="700" font-size="${mobile ? 72 : 90}" letter-spacing="-3">SHUBH${mobile ? '' : ' RAGHAV'}</text>
-${mobile ? `<text x="${x - 3}" y="264" fill="#ffffff" font-weight="700" font-size="72" letter-spacing="-3">RAGHAV</text>` : ''}
- <text x="${x}" y="${mobile ? 326 : 242}" fill="#e7d7f6" font-size="${mobile ? 26 : 26}">Architecting ideas.</text>
- <text x="${mobile ? x : 300}" y="${mobile ? 362 : 242}" fill="#e7d7f6" font-size="26">Engineering experiences.</text>
- <text x="${x}" y="${height - 34}" fill="#d8c1ed" font-size="${mobile ? 17 : 17}" letter-spacing="3">BUILD / REFINE / REPEAT</text>
-</g>
+<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="18" fill="none" stroke="#b78bd3" stroke-opacity=".45"/>
 </svg>\n`;
   await writeFile(`assets/hero${mobile ? '-mobile' : ''}.svg`, svg);
 }

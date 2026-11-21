@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="28" viewBox="0 0 88 28" role="img" aria-labelledby="title desc">
+<title id="title">Kotlin</title>
+<desc id="desc">Kotlin skill badge.</desc>
+<rect width="88" height="28" fill="#4d2c81"/>
+<g transform="translate(9 6) scale(.67)" fill="#e5c7ff"><path d="M24 24H0V0h24L12 12Z"/></g>
+<text x="33" y="18" font-family="Verdana,Arial,sans-serif" font-size="10.5" font-weight="700" letter-spacing=".7" fill="white">KOTLIN</text>
+</svg>

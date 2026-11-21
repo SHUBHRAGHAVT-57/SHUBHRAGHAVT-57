@@ -1,6 +1,6 @@
 <picture>
   <source media="(max-width: 600px)" srcset="assets/hero-mobile.svg">
-  <img src="assets/hero.svg" width="100%" alt="SHUBH RAGHAV — Architecting ideas. Engineering experiences.">
+  <img src="assets/hero.svg" width="100%" alt="Shubh Raghav, software developer, beside an animated silver and violet SR monogram.">
 </picture>
 
 <p align="center"><img src="assets/intro.svg" width="520" alt="Software, built with intent. Ideas into experiences."></p>
@@ -24,6 +24,8 @@ I’m **Shubh Raghav**. I build interactive web apps and Android tools. Two proj
 <p>
   <img src="assets/badges/typescript.svg" alt="TypeScript language">
   <img src="assets/badges/javascript.svg" alt="JavaScript language">
+  <img src="assets/badges/kotlin.svg" alt="Kotlin programming language">
+  <img src="assets/badges/python.svg" alt="Python programming language">
   <img src="assets/badges/html.svg" alt="HTML markup language">
   <img src="assets/badges/css.svg" alt="CSS styling language">
 </p>
@@ -36,14 +38,20 @@ I’m **Shubh Raghav**. I build interactive web apps and Android tools. Two proj
   <img src="assets/badges/git.svg" alt="Git version control">
 </p>
 
+**Android & graphics**
+
+<p>
+  <img src="assets/badges/jetpack-compose.svg" alt="Jetpack Compose for Android interfaces">
+  <img src="assets/badges/camerax.svg" alt="CameraX for Android cameras">
+  <img src="assets/badges/threejs.svg" alt="Three.js for browser graphics">
+</p>
+
 **Testing**
 
 <p>
   <img src="assets/badges/vitest.svg" alt="Vitest unit testing">
   <img src="assets/badges/playwright.svg" alt="Playwright browser testing">
 </p>
-
-On Android I use **Kotlin**, **Jetpack Compose**, and **CameraX**. For browser graphics I use **Three.js**, and for algorithm practice I use **Python**.
 
 ## Featured work
 
@@ -71,10 +79,24 @@ A native Android camera with eight live color looks. You can dial in the strengt
 
 [Build Lensqivo](https://github.com/SHUBHRAGHAVT-57/Lensqivo#build-it) · [Camera testing notes](https://github.com/SHUBHRAGHAVT-57/Lensqivo/blob/main/docs/validation.md)
 
+### [For You](https://github.com/SHUBHRAGHAVT-57/Gift-for-Soemeone)
+
+Write a note, choose a rose or a ring, and share the reveal. I used Three.js to draw the shapes with particles. A still version is available for people who prefer reduced motion.
+
+<p align="center">
+  <a href="https://shubhraghavt-57.github.io/Gift-for-Soemeone/">
+    <picture>
+      <source media="(max-width: 600px)" srcset="assets/for-you-rose.jpg">
+      <img src="assets/for-you-preview.jpg" width="720" alt="A rose drawn in pink and green particles in the live For You demo.">
+    </picture>
+  </a>
+</p>
+
+**[Try the reveal](https://shubhraghavt-57.github.io/Gift-for-Soemeone/)** · [Explore the source](https://github.com/SHUBHRAGHAVT-57/Gift-for-Soemeone)
+
 ### More projects
 
 - **[SyncVerse](https://github.com/SHUBHRAGHAVT-57/syncverse)** pairs a shared Markdown editor with local storage. Two writers can disconnect from the local relay, keep typing, and merge their edits when they reconnect. [Architecture](https://github.com/SHUBHRAGHAVT-57/syncverse/blob/main/docs/ARCHITECTURE.md)
-- **[For You](https://github.com/SHUBHRAGHAVT-57/Gift-for-Soemeone)** turns a note into a shareable Three.js particle rose or ring. The reveal also has a still version for reduced motion. [Try the reveal](https://shubhraghavt-57.github.io/Gift-for-Soemeone/)
 - **[Algorithmic Lab](https://github.com/SHUBHRAGHAVT-57/algorithmic-lab)** is where I keep Python implementations of algorithms, with complexity notes and tests for edge cases.
 
 ## GitHub activity

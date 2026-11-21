@@ -1,39 +1,136 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
 <title id="title">Shubh Raghav · Software Developer</title>
-<desc id="desc">Architecting ideas. Engineering experiences. Electric violet light trails and an animated geometric SR monogram. Motion stops when reduced motion is preferred.</desc>
+<desc id="desc">A silver and violet SR monogram on an engraved dial, with a slowly turning outer ring and fine violet light trails. Reduced motion holds the artwork still.</desc>
 <defs>
- <linearGradient id="bg" x2="1" y2=".5"><stop stop-color="#100b1c"/><stop offset=".56" stop-color="#281047"/><stop offset="1" stop-color="#56218a"/></linearGradient>
- <radialGradient id="glow"><stop stop-color="#a864f3" stop-opacity=".35"/><stop offset="1" stop-color="#a864f3" stop-opacity="0"/></radialGradient>
- <linearGradient id="ink" x2="1" y2="1"><stop stop-color="#f0e3ff"/><stop offset="1" stop-color="#b68aff"/></linearGradient>
- <linearGradient id="line"><stop stop-color="#a67bff" stop-opacity="0"/><stop offset=".5" stop-color="#dbb9ff"/><stop offset="1" stop-color="#a67bff" stop-opacity="0"/></linearGradient>
- <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#dec7ff" stroke-opacity=".06"/></pattern>
+  <linearGradient id="ground" x2="1" y2=".35"><stop stop-color="#100c1a"/><stop offset=".48" stop-color="#26133e"/><stop offset="1" stop-color="#482665"/></linearGradient>
+  <radialGradient id="wash"><stop stop-color="#b97af9" stop-opacity=".48"/><stop offset=".6" stop-color="#9e55e4" stop-opacity=".16"/><stop offset="1" stop-color="#a75af3" stop-opacity="0"/></radialGradient>
+  <linearGradient id="trail"><stop stop-color="#a464d4" stop-opacity="0"/><stop offset=".38" stop-color="#c082e9" stop-opacity=".25"/><stop offset=".72" stop-color="#d69bfb" stop-opacity=".47"/><stop offset="1" stop-color="#9679d5" stop-opacity=".12"/></linearGradient>
+  <radialGradient id="enamel" cx=".32" cy=".19" r=".95"><stop stop-color="#785595"/><stop offset=".32" stop-color="#4b315f"/><stop offset=".73" stop-color="#251631"/><stop offset="1" stop-color="#54396a"/></radialGradient>
+  <linearGradient id="rim" x1="0" y1=".1" x2=".86" y2=".95"><stop stop-color="#fff1ff"/><stop offset=".19" stop-color="#ae82cf"/><stop offset=".4" stop-color="#422d51"/><stop offset=".58" stop-color="#d7b4f6"/><stop offset=".78" stop-color="#6f5284"/><stop offset="1" stop-color="#e5c7ff"/></linearGradient>
+  <linearGradient id="silver" x1=".1" y1="0" x2=".87" y2="1"><stop stop-color="#fff8ff"/><stop offset=".34" stop-color="#efdfff"/><stop offset=".49" stop-color="#c29ad9"/><stop offset=".52" stop-color="#f7eaff"/><stop offset=".78" stop-color="#ceaae9"/><stop offset="1" stop-color="#9661c4"/></linearGradient>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".9" fill="#ebd8ff" opacity=".19"/></pattern>
+  <clipPath id="frame"><rect width="1200" height="360" rx="18"/></clipPath>
 </defs>
 <style>
-.orbit{stroke-dasharray:3 17;animation:orbit 36s linear infinite;transform-origin:150px 150px}
-.signal{stroke-dasharray:80 1100;animation:signal 12s linear infinite}
-@keyframes orbit{to{transform:rotate(360deg)}}
-@keyframes signal{to{stroke-dashoffset:-1180}}
-@media(prefers-reduced-motion:reduce){.orbit,.signal{animation:none}}
+  .index-ring{transform-origin:150px 150px;animation:turn 64s linear infinite}
+  .signal{stroke-dasharray:64 1500;animation:drift 14s linear infinite}
+  @keyframes turn{to{transform:rotate(360deg)}}
+  @keyframes drift{to{stroke-dashoffset:-1564}}
+  @media(prefers-reduced-motion:reduce){.index-ring,.signal{animation:none}}
 </style>
-<rect width="1200" height="360" rx="18" fill="url(#bg)"/>
-<rect width="1200" height="360" rx="18" fill="url(#grid)"/>
-<ellipse cx="1020" cy="180" rx="600" ry="360" fill="url(#glow)"/>
-<path d="M480 405Q816.0000000000001 158.4 1250 45" fill="none" stroke="#d6b6ff" stroke-opacity="0.05"/><path d="M504 405Q827.0000000000001 158.4 1250 75" fill="none" stroke="#d6b6ff" stroke-opacity="0.064"/><path d="M528 405Q838.0000000000001 158.4 1250 105" fill="none" stroke="#d6b6ff" stroke-opacity="0.078"/><path d="M552 405Q849.0000000000001 158.4 1250 135" fill="none" stroke="#d6b6ff" stroke-opacity="0.092"/><path d="M576 405Q860.0000000000001 158.4 1250 165" fill="none" stroke="#d6b6ff" stroke-opacity="0.10600000000000001"/><path d="M600 405Q871.0000000000001 158.4 1250 195" fill="none" stroke="#d6b6ff" stroke-opacity="0.12000000000000001"/><path d="M624 405Q882.0000000000001 158.4 1250 225" fill="none" stroke="#d6b6ff" stroke-opacity="0.134"/>
-<path class="signal" d="M0 359Q600 358 1200 125.99999999999999" fill="none" stroke="url(#line)" stroke-width="2"/>
-<rect x=".5" y=".5" width="1199" height="359" rx="18" fill="none" stroke="#9d6ace" stroke-opacity=".45"/>
-<g transform="translate(920 29) scale(.8)" fill="none">
- <circle cx="150" cy="150" r="143" stroke="#dec4ff" stroke-opacity=".16"/>
- <circle class="orbit" cx="150" cy="150" r="124" stroke="#dfbfff" stroke-opacity=".5"/>
- <path d="M205 72H112L65 150H166L120 228H212M199 72L246 150L199 228M166 150H246" stroke="url(#ink)" stroke-width="16" stroke-linejoin="bevel"/>
- <circle cx="150" cy="7" r="4" fill="#efdbff"/>
+<g clip-path="url(#frame)">
+  <rect width="1200" height="360" fill="url(#ground)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+  <ellipse cx="1008" cy="169.2" rx="504" ry="334.8" fill="url(#wash)"/>
+  <g fill="none" stroke="url(#trail)" stroke-width="1"><path d="M408.00000000000006 331 C744 405,732 198,1206 140" />
+<path d="M408.00000000000006 334 C744 405,732 194,1206 134" />
+<path d="M408.00000000000006 337 C744 405,732 190,1206 128" />
+<path d="M408.00000000000006 340 C744 405,732 186,1206 122" />
+<path d="M408.00000000000006 343 C744 405,732 182,1206 116" />
+<path d="M408.00000000000006 346 C744 405,732 178,1206 110" />
+<path d="M408.00000000000006 349 C744 405,732 174,1206 104" />
+<path d="M408.00000000000006 352 C744 405,732 170,1206 98" />
+<path d="M408.00000000000006 355 C744 405,732 166,1206 92" />
+<path d="M408.00000000000006 358 C744 405,732 162,1206 86" />
+<path d="M408.00000000000006 361 C744 405,732 158,1206 80" />
+<path d="M408.00000000000006 364 C744 405,732 154,1206 74" />
+<path d="M408.00000000000006 367 C744 405,732 150,1206 68" />
+<path d="M408.00000000000006 370 C744 405,732 146,1206 62" />
+<path d="M408.00000000000006 373 C744 405,732 142,1206 56" />
+<path d="M408.00000000000006 376 C744 405,732 138,1206 50" />
+<path d="M408.00000000000006 379 C744 405,732 134,1206 44" />
+<path d="M408.00000000000006 382 C744 405,732 130,1206 38" />
+<path d="M408.00000000000006 385 C744 405,732 126,1206 32" />
+<path d="M408.00000000000006 388 C744 405,732 122,1206 26" />
+<path d="M408.00000000000006 391 C744 405,732 118,1206 20" />
+<path d="M408.00000000000006 394 C744 405,732 114,1206 14" />
+<path d="M408.00000000000006 397 C744 405,732 110,1206 8" />
+<path d="M408.00000000000006 400 C744 405,732 106,1206 2" />
+<path d="M408.00000000000006 403 C744 405,732 102,1206 -4" />
+<path d="M408.00000000000006 406 C744 405,732 98,1206 -10" />
+<path d="M408.00000000000006 409 C744 405,732 94,1206 -16" />
+<path d="M408.00000000000006 412 C744 405,732 90,1206 -22" /></g>
+  <path class="signal" d="M432 370Q792 365 1210 36" fill="none" stroke="#d9b0ff" stroke-opacity=".6" stroke-width="1.4"/>
+  <g transform="translate(830 13) scale(1.10)">
+    <circle cx="151" cy="157" r="136" fill="#12091d" opacity=".5"/>
+    <circle cx="150" cy="150" r="140" fill="#2d1c3a" stroke="url(#rim)" stroke-width="3"/>
+    <circle cx="150" cy="150" r="121" fill="url(#enamel)" stroke="url(#rim)" stroke-width="2"/>
+    <g fill="none" stroke="#e3c5fa" stroke-opacity=".11"><circle cx="150" cy="150" r="113"/><circle cx="150" cy="150" r="110"/><circle cx="150" cy="150" r="107"/></g>
+    <g class="index-ring"><path transform="rotate(0 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(6 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(12 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(18 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(24 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(30 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(36 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(42 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(48 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(54 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(60 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(66 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(72 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(78 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(84 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(90 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(96 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(102 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(108 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(114 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(120 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(126 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(132 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(138 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(144 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(150 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(156 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(162 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(168 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(174 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(180 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(186 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(192 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(198 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(204 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(210 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(216 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(222 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(228 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(234 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(240 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(246 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(252 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(258 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(264 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(270 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(276 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(282 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(288 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(294 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(300 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(306 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(312 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(318 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(324 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(330 150 150)" d="M150 13v8" stroke="#f1dfff" stroke-opacity="0.7"/>
+<path transform="rotate(336 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(342 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(348 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/>
+<path transform="rotate(354 150 150)" d="M150 13v3" stroke="#f1dfff" stroke-opacity="0.24"/><circle cx="150" cy="17" r="2.4" fill="#fff2ff"/></g>
+    <g fill="none" stroke-linejoin="bevel" stroke-linecap="square">
+      <path d="M205 72H112L65 150H166L120 228H212M199 72L246 150L199 228M166 150H246" transform="translate(0 7)" stroke="#201327" stroke-width="19"/>
+      <path d="M205 72H112L65 150H166L120 228H212M199 72L246 150L199 228M166 150H246" transform="translate(0 4)" stroke="#805894" stroke-width="17"/>
+      <path d="M205 72H112L65 150H166L120 228H212M199 72L246 150L199 228M166 150H246" stroke="url(#silver)" stroke-width="16"/>
+    </g>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="58" y="58" fill="#ebd3ff" font-size="17" letter-spacing="3">SOFTWARE DEVELOPER</text>
+    <path d="M58 90h46" stroke="#cc9eff" stroke-width="3"/>
+    <text x="55" y="184" fill="#fffafa" font-size="90" font-weight="700" letter-spacing="-3">SHUBH RAGHAV</text>
+    
+    <text x="58" y="242" fill="#e9d9f3" font-size="26">Architecting ideas. Engineering experiences.</text>
+    
+    <text x="58" y="326" fill="#d8c1ed" font-size="17" letter-spacing="3">BUILD / REFINE / REPEAT</text>
+  </g>
 </g>
-<g font-family="Arial, Helvetica, sans-serif">
- <text x="58" y="58" fill="#e3c7ff" font-size="17" letter-spacing="3">SOFTWARE DEVELOPER</text>
- <path d="M58 90h46" stroke="#d5a7ff" stroke-width="3"/>
- <text x="55" y="184" fill="#ffffff" font-weight="700" font-size="90" letter-spacing="-3">SHUBH RAGHAV</text>
-
- <text x="58" y="242" fill="#e7d7f6" font-size="26">Architecting ideas.</text>
- <text x="300" y="242" fill="#e7d7f6" font-size="26">Engineering experiences.</text>
- <text x="58" y="326" fill="#d8c1ed" font-size="17" letter-spacing="3">BUILD / REFINE / REPEAT</text>
-</g>
+<rect x=".5" y=".5" width="1199" height="359" rx="18" fill="none" stroke="#b78bd3" stroke-opacity=".45"/>
 </svg>
